@@ -7,8 +7,8 @@
     <ProjectGuid>{796A79A2-6754-4847-9910-28DE0A4E5FF1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Source\Properties</AppDesignerFolder>
-    <RootNamespace>Merthsoft.RemoveTutorialButton</RootNamespace>
-    <AssemblyName>Merthsoft.RemoveTutorialButton</AssemblyName>
+    <RootNamespace>ThatCodyGuy.RemoveThis</RootNamespace>
+    <AssemblyName>ThatCodyGuy.RemoveThis</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -18,7 +18,7 @@
     <DebugSymbols>false</DebugSymbols>
     <DebugType>none</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>1.3\Assemblies\</OutputPath>
+    <OutputPath>1.4\Assemblies\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -27,13 +27,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Source\Patches\MainMenuDrawer_DoMainMenuControls.cs" />
-    <Compile Include="Source\RemoveTutorialButton.cs" />
+    <Compile Include="Source\ThatCodyGuy.RemoveThis.cs" />
     <Compile Include="Source\Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -41,10 +47,14 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="About\Preview.png" />
+    <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Lib.Harmony">
-      <Version>2.0.4</Version>
+    <PackageReference Include="Krafs.Rimworld.Ref">
+      <Version>1.4.3524</Version>
+    </PackageReference>
+    <PackageReference Include="UnlimitedHugs.Rimworld.HugsLib">
+      <Version>9.0.1</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

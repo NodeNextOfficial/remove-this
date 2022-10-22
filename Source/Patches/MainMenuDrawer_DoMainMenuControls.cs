@@ -3,7 +3,7 @@ using RimWorld;
 using System.Collections.Generic;
 using System.Reflection.Emit;
 
-namespace Merthsoft.NoTutorialButton.Source.Patches {
+namespace ThatCodyGuy.RemoveThis.Source.Patches {
     [HarmonyPatch(typeof(MainMenuDrawer), "DoMainMenuControls")]
     public class MainMenuDrawer_DoMainMenuControls {
         public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions) {

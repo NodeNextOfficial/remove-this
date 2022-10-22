@@ -2,11 +2,11 @@
 using System.Reflection;
 using Verse;
 
-namespace Merthsoft.NoTutorialButton {
+namespace ThatCodyGuy.RemoveThis {
     [StaticConstructorOnStartup]
     public class RemoveTutorialButton {
         static RemoveTutorialButton() {
-            var harmony = new Harmony("Merthsoft.NoTutorialButton");
+            var harmony = new Harmony("ThatCodyGuy.RemoveThis");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
         }
     }
